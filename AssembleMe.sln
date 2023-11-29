@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssembleMe", "AssembleMe\AssembleMe.csproj", "{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembleMe", "AssembleMe\AssembleMe.csproj", "{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssembleMe.MicrosoftDependencyInjection", "AssembleMe.MicrosoftDependencyInjection\AssembleMe.MicrosoftDependencyInjection.csproj", "{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembleMe.MicrosoftDependencyInjection", "AssembleMe.MicrosoftDependencyInjection\AssembleMe.MicrosoftDependencyInjection.csproj", "{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@
 namespace AssembleMe.MicrosoftDependencyInjection;
 public static class IServiceCollectionExtensions
 {
-    public static IServiceCollection AddAssembler(IServiceCollection services, Action<IAssemblerBuilder> configure) =>
+    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder> configure) =>
         AddAssembler(services, configure, AssemblerOptions.Default);
 
     public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder> configure, AssemblerOptions assemblerOptions)
