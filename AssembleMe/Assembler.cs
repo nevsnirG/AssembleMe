@@ -42,7 +42,7 @@ public sealed class Assembler : IAssembler
         var context = AssemblyLoadContext.GetLoadContext(Assembly.GetExecutingAssembly());
 
         var directory = new DirectoryInfo(_options.AssembleFromFileSystemDirectory);
-        var searchOptions = SearchOption.AllDirectories;
+        var searchOptions = _options.AssembleFileSystemAssembliesRecursively ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
         foreach (var file in directory.EnumerateFiles("*.dll", searchOptions))
         {
             if (!context!.Assemblies.Any(a => a.Location.Equals(file.FullName, StringComparison.InvariantCultureIgnoreCase)))
