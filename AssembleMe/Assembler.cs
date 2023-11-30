@@ -7,6 +7,7 @@ public interface IAssembler
 {
     void Assemble();
 }
+
 public sealed class Assembler : IAssembler
 {
     private readonly AssemblerOptions _options;
