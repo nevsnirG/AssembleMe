@@ -14,7 +14,7 @@ public static class IServiceCollectionExtensions
         var assemblerBuilder = new AssemblerBuilder(services);
         configure(assemblerBuilder);
 
-        services.AddTransient<IAssembler>(sp => new Assembler(assemblerOptions, sp.GetServices<IProcessAssemblies>()));
+        services.AddTransient<IAssembler>(sp => new Assembler(sp.GetServices<IProcessAssemblies>(), assemblerOptions));
 
         var serviceProvider = services.BuildServiceProvider();
         var assembler = serviceProvider.GetRequiredService<IAssembler>();

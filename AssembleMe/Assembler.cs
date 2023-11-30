@@ -14,7 +14,11 @@ public sealed class Assembler : IAssembler
     private readonly List<string> _processedAssemblies;
     private readonly IEnumerable<IProcessAssemblies> _assemblyProcessors;
 
-    public Assembler(AssemblerOptions options, IEnumerable<IProcessAssemblies> assemblyProcessors)
+    public Assembler(IEnumerable<IProcessAssemblies> assemblyProcessors) : this(assemblyProcessors, AssemblerOptions.Default)
+    {
+    }
+
+    public Assembler(IEnumerable<IProcessAssemblies> assemblyProcessors, AssemblerOptions options)
     {
         _options = options;
         _processedAssemblies = new();
