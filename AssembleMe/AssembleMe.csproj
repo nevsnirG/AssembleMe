@@ -1,6 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<PackageId>AssembleMe</PackageId>
+		<Version>0.1.3-alpha</Version>
+		<Authors>Ken van Grinsven</Authors>
+		<Company>Grinsven Software Solutions</Company>
+		
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
