@@ -2,16 +2,16 @@
 
 	<PropertyGroup>
 		<PackageId>AssembleMe</PackageId>
-		<Version>0.1.3-alpha</Version>
+		<Version>0.1.4-alpha</Version>
 		<Authors>Ken van Grinsven</Authors>
 		<Company>Grinsven Software Solutions</Company>
 		<Title>AssembleMe</Title>
 		<Description>Minimal assembly discovery and loading framework</Description>
 		<PackageProjectUrl>https://github.com/nevsnirG/AssembleMe</PackageProjectUrl>
-		<PackageReadmeFile></PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/nevsnirG/AssembleMe</RepositoryUrl>
 		<PackageTags>Assembly; Assembly Scanning; Assembly Discovery</PackageTags>
-		<PackageReleaseNotes>Alpha version, subject to change.</PackageReleaseNotes>
+		<PackageReleaseNotes>Alpha version, subject to changes.</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -23,10 +23,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Include="..\LICENSE">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>
