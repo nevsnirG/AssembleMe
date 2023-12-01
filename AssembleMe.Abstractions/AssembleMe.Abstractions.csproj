@@ -1,41 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<PackageId>AssembleMe</PackageId>
-		<Version>0.2.0-alpha</Version>
-		<Authors>Ken van Grinsven</Authors>
+		<Title>AssembleMe.Abstractions</Title>
+		<Version>0.1.0-alpha</Version>
 		<Company>Grinsven Software Solutions</Company>
-		<Title>AssembleMe</Title>
-		<Description>Minimal assembly discovery and loading framework</Description>
+		<Product>AssembleMe.Abstractions</Product>
 		<PackageProjectUrl>https://github.com/nevsnirG/AssembleMe</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/nevsnirG/AssembleMe</RepositoryUrl>
 		<PackageTags>Assembly; Assembly Scanning; Assembly Discovery</PackageTags>
-		<PackageReleaseNotes>Alpha version, subject to changes.</PackageReleaseNotes>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<IncludeSymbols>True</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 		</None>
 		<None Include="..\README.md">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\AssembleMe.Abstractions\AssembleMe.Abstractions.csproj" />
 	</ItemGroup>
 
 </Project>

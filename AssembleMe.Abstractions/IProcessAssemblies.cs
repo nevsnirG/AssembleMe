@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace AssembleMe;
+namespace AssembleMe.Abstractions;
 public interface IProcessAssemblies
 {
     void ProcessAssembly(Assembly assembly);

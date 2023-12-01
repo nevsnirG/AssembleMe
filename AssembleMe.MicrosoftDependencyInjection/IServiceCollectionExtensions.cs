@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AssembleMe.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AssembleMe.MicrosoftDependencyInjection;
 public static class IServiceCollectionExtensions
@@ -20,7 +21,8 @@ public static class IServiceCollectionExtensions
             configure(assemblerBuilder);
         }
 
-        services.AddTransient<IAssembler>(sp => new Assembler(sp.GetServices<IProcessAssemblies>(), assemblerOptions));
+        services.AddTransient<ICreateAssemblyProcessors, DependencyInjectedAssemblyProcessorCreator>();
+        services.AddTransient<IAssembler>(sp => ActivatorUtilities.CreateInstance<Assembler>(sp, assemblerOptions));
 
         var serviceProvider = services.BuildServiceProvider();
         var assembler = serviceProvider.GetRequiredService<IAssembler>();
