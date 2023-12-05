@@ -4,29 +4,12 @@ using System.Reflection;
 using System.Runtime.Loader;
 
 namespace AssembleMe;
-public interface IAssembler
-{
-    void Assemble();
-}
-
-public sealed class Assembler : IAssembler
+internal sealed class Assembler : IAssembler
 {
     private readonly AssemblerOptions _options;
     private readonly List<string> _discoveredAssemblyFullNames;
     private readonly List<IProcessAssemblies> _assemblyProcessors;
     private readonly ICreateAssemblyProcessors _assemblyProcessorCreator;
-
-#pragma warning disable IDE1006 // Naming Styles
-    private static readonly IEnumerable<IProcessAssemblies> NoProcessors = Enumerable.Empty<IProcessAssemblies>();
-#pragma warning restore IDE1006 // Naming Styles
-
-    public Assembler() : this(NoProcessors, new DefaultAssemblyProcessorCreator(), AssemblerOptions.Default) { }
-
-    public Assembler(AssemblerOptions options) : this(NoProcessors, new DefaultAssemblyProcessorCreator(), options) { }
-
-    public Assembler(IEnumerable<IProcessAssemblies> assemblyProcessors) : this(assemblyProcessors, AssemblerOptions.Default) { }
-
-    public Assembler(IEnumerable<IProcessAssemblies> assemblyProcessors, AssemblerOptions options) : this(assemblyProcessors, new DefaultAssemblyProcessorCreator(), options) { }
 
     public Assembler(IEnumerable<IProcessAssemblies> assemblyProcessors, ICreateAssemblyProcessors assemblyProcessorCreator, AssemblerOptions options)
     {

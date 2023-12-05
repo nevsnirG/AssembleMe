@@ -1,4 +1,4 @@
-﻿namespace AssembleMe;
+﻿namespace AssembleMe.Abstractions;
 public sealed class AssemblerOptions
 {
     /// <summary>

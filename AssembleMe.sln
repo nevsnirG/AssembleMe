@@ -5,9 +5,7 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembleMe", "AssembleMe\AssembleMe.csproj", "{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembleMe.MicrosoftDependencyInjection", "AssembleMe.MicrosoftDependencyInjection\AssembleMe.MicrosoftDependencyInjection.csproj", "{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssembleMe.Abstractions", "AssembleMe.Abstractions\AssembleMe.Abstractions.csproj", "{5AB0293B-9928-4E3E-B65F-A4DCD3E013CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssembleMe.Abstractions", "AssembleMe.Abstractions\AssembleMe.Abstractions.csproj", "{5AB0293B-9928-4E3E-B65F-A4DCD3E013CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73D3EA84-BEEE-42EA-A3C6-FCAF037FB226}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2EDF822-3B9B-4D6E-8296-560D318DCD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AB0293B-9928-4E3E-B65F-A4DCD3E013CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AB0293B-9928-4E3E-B65F-A4DCD3E013CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB0293B-9928-4E3E-B65F-A4DCD3E013CE}.Release|Any CPU.ActiveCfg = Release|Any CPU

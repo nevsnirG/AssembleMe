@@ -1,7 +1,7 @@
 ﻿using AssembleMe.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AssembleMe.MicrosoftDependencyInjection;
+namespace AssembleMe;
 public static class IServiceCollectionExtensions
 {
     public static IServiceCollection AddAssembler(this IServiceCollection services) =>

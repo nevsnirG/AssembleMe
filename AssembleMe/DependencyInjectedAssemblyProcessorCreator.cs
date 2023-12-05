@@ -1,7 +1,7 @@
 ﻿using AssembleMe.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AssembleMe.MicrosoftDependencyInjection;
+namespace AssembleMe;
 internal sealed class DependencyInjectedAssemblyProcessorCreator : ICreateAssemblyProcessors
 {
     private readonly IServiceProvider _serviceProvider;
