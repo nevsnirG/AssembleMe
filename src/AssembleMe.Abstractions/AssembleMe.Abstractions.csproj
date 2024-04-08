@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<Title>AssembleMe.Abstractions</Title>
-		<Version>0.3.0-alpha</Version>
+		<Version>1.0.0</Version>
 		<Company>Grinsven Software Solutions</Company>
 		<Product>AssembleMe.Abstractions</Product>
 		<PackageProjectUrl>https://github.com/nevsnirG/AssembleMe</PackageProjectUrl>
