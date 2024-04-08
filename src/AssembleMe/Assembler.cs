@@ -94,7 +94,7 @@ internal sealed class Assembler : IAssembler
     {
         foreach (var type in assembly.GetTypes())
         {
-            if (IsAssemblyProcessor(type) && AssemblyProcessorAlreadyDiscovered(type))
+            if (IsAssemblyProcessor(type) && AssemblyProcessorNotAlreadyDiscovered(type))
             {
                 var instance = _assemblyProcessorCreator.Create(type);
                 _assemblyProcessors.Add(instance);
@@ -107,7 +107,7 @@ internal sealed class Assembler : IAssembler
         return !type.IsInterface && !type.IsAbstract && type.IsAssignableTo(typeof(IProcessAssemblies));
     }
 
-    private bool AssemblyProcessorAlreadyDiscovered(Type type)
+    private bool AssemblyProcessorNotAlreadyDiscovered(Type type)
     {
         return !_assemblyProcessors.Any(pdp => pdp.GetType() == type);
     }
