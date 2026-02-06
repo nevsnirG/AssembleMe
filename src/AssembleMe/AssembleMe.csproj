@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<PackageId>AssembleMe</PackageId>
-		<Version>1.0.0</Version>
+		<Version>2.0.0</Version>
 		<Authors>Ken van Grinsven</Authors>
 		<Company>Grinsven Software Solutions</Company>
 		<Title>AssembleMe</Title>

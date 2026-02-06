@@ -7,18 +7,32 @@ public static class IServiceCollectionExtensions
     public static IServiceCollection AddAssembler(this IServiceCollection services) =>
         AddAssembler(services, null, AssemblerOptions.Default);
 
+    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<AssemblerOptions>? configureOptions)
+    {
+        var options = new AssemblerOptions();
+        configureOptions?.Invoke(options);
+        return AddAssembler(services, null, options);
+    }
+
     public static IServiceCollection AddAssembler(this IServiceCollection services, AssemblerOptions assemblerOptions) =>
         AddAssembler(services, null, assemblerOptions);
 
-    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder>? configure) =>
-        AddAssembler(services, configure, AssemblerOptions.Default);
+    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder>? configureBuilder) =>
+        AddAssembler(services, configureBuilder, AssemblerOptions.Default);
 
-    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder>? configure, AssemblerOptions assemblerOptions)
+    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder>? configureBuilder, Action<AssemblerOptions>? configureOptions)
     {
-        if (configure is not null)
+        var options = new AssemblerOptions();
+        configureOptions?.Invoke(options);
+        return AddAssembler(services, configureBuilder, options);
+    }
+
+    public static IServiceCollection AddAssembler(this IServiceCollection services, Action<IAssemblerBuilder>? configureBuilder, AssemblerOptions assemblerOptions)
+    {
+        if (configureBuilder is not null)
         {
             var assemblerBuilder = new AssemblerBuilder(services);
-            configure(assemblerBuilder);
+            configureBuilder(assemblerBuilder);
         }
 
         services.AddTransient<ICreateAssemblyProcessors, DependencyInjectedAssemblyProcessorCreator>();

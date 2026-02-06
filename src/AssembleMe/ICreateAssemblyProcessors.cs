@@ -1,4 +1,6 @@
-﻿namespace AssembleMe.Abstractions;
+﻿using AssembleMe.Abstractions;
+
+namespace AssembleMe;
 public interface ICreateAssemblyProcessors
 {
     IProcessAssemblies Create(Type type);
